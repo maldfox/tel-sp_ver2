@@ -29,7 +29,7 @@ def start_app():
             case 5:
                 find_contacts(text.input_serach_word)
             case 6:
-                # добавил проверку индекса для изменения контакта
+                # Проверка индекса для изменения контакта
                 check_box = find_contacts(text.input_serach_word_for_edit)
                 if check_box:
                     u_id = int(view.input_data(text.input_id_for_edit))
@@ -40,7 +40,7 @@ def start_app():
                     else:
                         view.show_message(text.mistake_input)
             case 7:
-                # добавил проверку индекса для удаления контакта
+                # Проверка индекса для удаления контакта
                 check_box = find_contacts(text.input_serach_word_for_delete)
                 if check_box:
                     u_id = int(view.input_data(text.input_id_for_delete))
@@ -50,7 +50,7 @@ def start_app():
                     else:
                         view.show_message(text.mistake_input)
             case 8:
-                # добавил проверку изменения книги
+                # Проверка изменения книги
                 if not model.phone_book or model.is_book_changed():
                     break
                 else:
